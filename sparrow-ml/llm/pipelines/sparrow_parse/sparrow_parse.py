@@ -20,6 +20,7 @@ from .sparrow_utils import (
 )
 import concurrent.futures
 from pipelines.interface import Pipeline
+import sys
 sys.path.append("/kaggle/working/ml_ocr_pp/sparrow-ml/llm/pipelines")
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -30,6 +31,7 @@ def subprocess_inference(config, input_data, tables_only, crop_size, query_all_d
     """
     Subprocess function to execute the inference logic.
     """
+    import sys
     sys.path.append("/kaggle/working/ml_ocr_pp/sparrow-ml/llm/pipelines")
     from sparrow_parse.extractors.vllm_extractor import VLLMExtractor
     from sparrow_parse.vllm.inference_factory import InferenceFactory
