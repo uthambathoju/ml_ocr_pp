@@ -10,10 +10,10 @@ if [[ ! "$PYTHON_VERSION" == *"3.10.12"* ]]; then
   exit 1
 fi
 
-PYTHON_SCRIPT_PATH="engine.py"
+PYTHON_SCRIPT_PATH="/kaggle/working/ml_ocr_pp/sparrow-ml/llm/engine.py"
 
 if [ "$1" == "assistant" ]; then
-    PYTHON_SCRIPT_PATH="assistant.py"
+    PYTHON_SCRIPT_PATH="/kaggle/working/ml_ocr_pp/sparrow-ml/llm/assistant.py"
     shift # Shift the arguments to exclude the first one
 fi
 
